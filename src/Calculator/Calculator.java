@@ -10,10 +10,10 @@ public class Calculator {
      */
     public static double calculatingDiscount(double purchaseAmount, int discountAmount) {
         if (purchaseAmount <= 0) {
-            throw new IllegalArgumentException("The purchase amount is equal to or less than zero");
+            throw new ArithmeticException("The purchase amount is equal to or less than zero");
         }
         if (discountAmount < 0) {
-            throw new IllegalArgumentException("The discount cannot be negative");
+            throw new ArithmeticException("The discount cannot be negative");
         }
         return purchaseAmount - (purchaseAmount * discountAmount) / 100; // Метод должен возвращать сумму покупки со скидкой
     }

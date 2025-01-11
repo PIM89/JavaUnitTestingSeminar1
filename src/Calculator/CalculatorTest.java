@@ -13,9 +13,9 @@ public class CalculatorTest {
                 .isEqualTo(0.36, Offset.offset(0.001));
 
         assertThatThrownBy(() -> Calculator.calculatingDiscount(0, 100))
-                .isInstanceOf(IllegalArgumentException.class);
+                .isInstanceOf(ArithmeticException.class);
 
         assertThatThrownBy(() -> Calculator.calculatingDiscount(100, -10))
-                .isInstanceOf(IllegalArgumentException.class);
+                .isInstanceOf(ArithmeticException.class);
     }
 }
